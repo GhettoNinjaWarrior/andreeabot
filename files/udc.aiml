@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml version="1.0">
+	<category>
+		<pattern>_ HOROSCOPUL MEU</pattern>
+		<template>
+			<srai>HOROSCOP</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>_ HOROSCOPUL MEU *</pattern>
+		<template>
+			<srai>HOROSCOP</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>HOROSCOP</pattern>
+		<template>
+			<think>
+				<set name="topic">Horoscop</set>
+			</think>
+			<condition>
+				<li name="zodie" value="*">
+					<random>
+						<li>
+							<srai>
+								<get name="zodie"/>
+							</srai>
+						</li>
+					</random>
+				</li>
+				<li>Ce zodie esti?</li>
+			</condition>
+		</template>
+	</category>
+	<topic name="Horoscop">
+		<category>
+			<pattern>*</pattern>
+			<that>CE ZODIE ESTI</that>
+			<template>Nu exista aceasta zodie:<star/>.
+</template>
+		</category>
+	</topic>
+	<topic name="Horoscop">
+		<category>
+			<pattern>BERBEC</pattern>
+			<template>BERBEC - 21 Martie - 20 Aprilie<br/>
+				<think>
+					<set name="sign">Berbec</set>
+				</think>
+				<srai>HOROSCOP ALEATORIU</srai>
+			</template>
+		</category>
+	</topic>
+	<topic name="Horoscop">
+		<category>
+			<pattern>TAUR</pattern>
+			<template>TAUR - 21 Aprilie - 21 Mai<br/>
+				<think>
+					<set name="sign">Taur</set>
+				</think>
+				<srai>HOROSCOP ALEATORIU</srai>
+			</template>
+		</category>
+	</topic>
+	<topic name="Horoscop">
+		<category>
+			<pattern>GEMENI</pattern>
+			<template>GEMENI - 22 Mai - 21 Iunie<br/>
+				<think>
+					<set name="sign">Gemeni</set>
+				</think>
+				<srai>HOROSCOP ALEATORIU</srai>
+			</template>
+		</category>
+	</topic>
+	<topic name="Horoscop">
+		<category>
+			<pattern>RAC</pattern>
+			<template>RAC - 22 Iunie - 22 Iulie<br/>
+				<think>
+					<set name="sign">Rac</set>
+				</think>
+				<srai>HOROSCOP ALEATORIU</srai>
+			</template>
+		</category>
+	</topic>
+	<topic name="Horoscop">
+		<category>
+			<pattern>LEU</pattern>
+			<template>LEU - 23 Iulie - 21 Augustt<br/>
+				<think>
+					<set name="sign">Leu</set>
+				</think>
+				<srai>HOROSCOP ALEATORIU</srai>
+			</template>
+		</category>
+	</topic>
+	<topic name="Horoscop">
+		<category>
+			<pattern>FECIOARA</pattern>
+			<template>FECIOARA - 22 August - 23 Septembrie<br/>
+				<think>
+					<set name="sign">Fecioara</set>
+				</think>
+				<srai>HOROSCOP ALEATORIU</srai>
+			</template>
+		</category>
+	</topic>
+	<topic name="Horoscop">
+		<category>
+			<pattern>BALANTA</pattern>
+			<template>BALANTA - 24 Septembrie - 23 Octombrie<br/>
+				<think>
+					<set name="sign">Balanta</set>
+				</think>
+				<srai>HOROSCOP ALEATORIU</srai>
+			</template>
+		</category>
+	</topic>
+	<topic name="Horoscop">
+		<category>
+			<pattern>SCORPION</pattern>
+			<template>SCORPION - 24 Octombire - 22 Noiembrie<br/>
+				<think>
+					<set name="sign">Scorpion</set>
+				</think>
+				<srai>HOROSCOP ALEATORIU</srai>
+			</template>
+		</category>
+	</topic>
+	<topic name="Horoscop">
+		<category>
+			<pattern>SAGETATOR</pattern>
+			<template>SAGETATOR - 23 Noiembrie - 22 Decembrie<br/>
+				<think>
+					<set name="sign">Sagetator</set>
+				</think>
+				<srai>HOROSCOP ALEATORIU</srai>
+			</template>
+		</category>
+	</topic>
+	<topic name="Horoscop">
+		<category>
+			<pattern>CAPRICORN</pattern>
+			<template>CAPRICORN - 23 Decembrie - 20 Ianuarie<br/>
+				<think>
+					<set name="sign">Capricorn</set>
+				</think>
+				<srai>RANDOM HOROSCOPE</srai>
+			</template>
+		</category>
+	</topic>
+	<topic name="Horoscop">
+		<category>
+			<pattern>VARSATOR</pattern>
+			<template>Varsator - 21 Ianuarie - 19 Februarie<br/>
+				<think>
+					<set name="sign">Varsator</set>
+				</think>
+				<srai>HOROSCOP ALEATORIU</srai>
+			</template>
+		</category>
+	</topic>
+	<topic name="Horoscop">
+		<category>
+			<pattern>PESTI</pattern>
+			<think>
+				<set name="sign">Pesti</set>
+			</think>
+			<template>Pesti - February 20th - March 20th<br/>
+				<srai>HOROSCOP ALEATORIU</srai>
+			</template>
+		</category>
+	</topic>
+
+<topic name="Horoscop">
+	<category>
+		<pattern>HOROSCOP ALEATORIU</pattern>
+		<template>
+Horoscopul tau pentru <date format="%x"/>
+			<br/>
+			<br/>
+			<random>
+				<li>Astazi, o sa fie interesant deoarece</li>
+				<li>Daca ai griji din cauza banilor, asta este o veste buna deoarece</li>
+				<li>Daca esti singur/a, o sa ai vesti bune deoarece</li>
+				<li>Stelele se vor alinia in drept cu zodia ta in urmatoarele zile si</li>
+			</random>
+			<random>
+				<li>Jupiter si Venus</li>
+				<li>Marte si Capricorn </li>
+				<li>Soarele alaturi de Mercur</li>
+				<li>trei planete diferite</li>
+			</random>
+			<random>
+				<li>vor intra in zodia ta.</li>
+				<li>se vor alinia in Pesti.</li>
+				<li>sunt vizibile langa Neptun.</li>
+				<li>se vor impreuna.</li>
+			</random>
+			<random>
+				<li>Asta o sa insemne</li>
+				<li>Un event rar o sa aibe loc si din cauza asta o sa provoace</li>
+				<li>Foloseste-ti ziua cu cap deoarece</li>
+				<li>Totul o sa mearga struna pentru tine,</li>
+			</random>
+			<random>
+				<li>ca norocul iti surade si ca</li>
+				<li>Norocul este de partea ta si</li>
+				<li>Dragostea nu este departe si</li>
+				<li>asta o sa fie o zi grozava si</li>
+			</random>
+			<random>
+				<li>nu o sa pui piciorul gresit.</li>
+				<li>cuiva caruia ii place de tine se simte la fel.</li>
+				<li>un posibil castig la loterie este prevestit in stele.</li>
+				<li>vei redescoperi o aminitre din familie.</li>
+			</random>
+			<random>
+				<li>Insa,</li>
+				<li>Norocul s-ar putea sa nu dureze,</li>
+				<li>Nu sunt numai vesti bune, </li>
+				<li>Ai grija totusi,</li>
+			</random>
+			<random>
+				<li>Saturn nu este foarte departe de Venus</li>
+				<li>Luna se misca in curand prin Berbec</li>
+				<li>Aliniera lui Neptun cu Pluto inseamna</li>
+				<li>nu toate planetele sunt fericite si</li>
+			</random>
+			<random>
+				<li>lucrurile s-ar putea sa nu mearga conform planului.</li>
+				<li>un coleg de munca gelos te urmareste indeaproape.</li>
+				<li>ceva ce ai facut saptamana trecuta o sa se intoarca sa te bantuie.</li>
+				<li>o sa pierzi un obiect valoros.</li>
+			</random>
+			<random>
+				<li>Asadar, pe scurt,</li>
+				<li>In mare,</li>
+				<li>Oricum,,</li>
+				<li>Avand in vedere totul,</li>
+			</random>
+			<random>
+				<li>planetele se misca si se indreapta spre Balanta deci</li>
+				<li>Marte este o planeta suparata dar este slaba deoarece Scorpionul rasare la est</li>
+				<li>tine-ti un ochi aproape pe cei din jurul tau dar</li>
+				<li>iti stii mintea foarte bine deci</li>
+			</random>
+			<random>
+				<li>bucura-te de ziua de azi.</li>
+				<li>fa-ti timp pentru tine astazi.</li>
+				<li>permite-i zilei de astazi sa fie o zi buna.</li>
+				<li>uita de lucrurile rele si uite-te inainte pentru a avea o zi grozava.</li>
+			</random>
+			<think>
+				<set name="topic">Viitor</set>
+			</think>
+		</template>
+	</category>
+</topic>
+</aiml>
